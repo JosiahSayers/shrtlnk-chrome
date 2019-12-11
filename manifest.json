@@ -6,7 +6,8 @@
   "background": {
     "scripts": [
       "background/postUrl.js",
-      "background/contextMenu.js"
+      "background/contextMenu.js",
+      "background/notifications.js"
     ],
     "persistent": false
   },
@@ -15,6 +16,7 @@
   },
   "permissions": [
     "contextMenus",
-    "https://shrtlnk.dev/"
+    "https://shrtlnk.dev/",
+    "notifications"
   ]
 }

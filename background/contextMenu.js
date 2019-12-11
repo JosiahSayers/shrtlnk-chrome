@@ -1,4 +1,5 @@
 const contexts = ['page', 'frame', 'link', 'image', 'video', 'audio', 'selection'];
+let mostRecentShrtlnk;
 
 chrome.contextMenus.create({
   title: 'Create shrtlnk',
@@ -29,6 +30,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 
 async function callApi(url) {
+  notifyApiCallSent();
   let response = await postUrl(url);
-  console.log('API Response: ', response);
+  if (response && response.shrtlnk) {
+    mostRecentShrtlnk = response.shrtlnk;
+    notifyApiCallSuccess(response);
+  }
 }
