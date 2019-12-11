@@ -1,7 +1,7 @@
 function notifyApiCallSent() {
   chrome.notifications.create('ApiCallSent', {
     type: 'basic',
-    iconUrl: '../images/thumbsup.jpg',
+    iconUrl: '../images/icons/icon512.png',
     title: 'Creating a shrtlnk...',
     message: 'Your shortened link will be created soon. You\'ll get another notification when it\'s ready.'
   });
@@ -10,9 +10,9 @@ function notifyApiCallSent() {
 function notifyApiCallSuccess(apiResponse) {
   chrome.notifications.create('ApiCallSuccess', {
     type: 'basic',
-    iconUrl: '../images/thumbsup.jpg',
+    iconUrl: '../images/icons/icon512.png',
     title: 'Your shrtlnk is here!',
-    message: `Click here to copy the shrtlnk ${apiResponse.shrtlnk}`,
+    message: `Click here to copy the shrtlnk \n${apiResponse.shrtlnk}`,
     buttons: [
       {
         title: 'Copy to Clipboard'
@@ -39,7 +39,7 @@ function handleNotificationClick(textToCopy) {
   if (textToCopy) {
     copyToClipboard(textToCopy);
   }
-  
+
   clearNotifications();
 }
 

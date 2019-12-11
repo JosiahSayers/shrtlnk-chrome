@@ -12,11 +12,27 @@
     "persistent": false
   },
   "browser_action": {
-    "default_popup": "popup/pasteUrl.html"
+    "default_popup": "popup/pasteUrl.html",
+    "default_icon": {
+      "16": "images/icons/icon16.png",
+      "32": "images/icons/icon32.png",
+      "48": "images/icons/icon48.png",
+      "180": "images/icons/icon180.png",
+      "192": "images/icons/icon192.png",
+      "512": "images/icons/icon512.png"
+    }
   },
   "permissions": [
     "contextMenus",
     "https://shrtlnk.dev/",
     "notifications"
-  ]
+  ],
+  "icons": {
+    "16": "images/icons/icon16.png",
+    "32": "images/icons/icon32.png",
+    "48": "images/icons/icon48.png",
+    "180": "images/icons/icon180.png",
+    "192": "images/icons/icon192.png",
+    "512": "images/icons/icon512.png"
+  }
 }
