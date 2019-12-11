@@ -13,16 +13,12 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
     if (info.linkUrl) {
       url = info.linkUrl;
-      console.log('linkUrl: ' + url);
     } else if (info.srcUrl) {
       url = info.srcUrl;
-      console.log('srcUrl: ' + url);
     } else if (info.selectionText) {
       url = info.selectionText;
-      console.log('selectionText: ' + url);
     } else {
       url = info.pageUrl;
-      console.log('pageUrl: ' + url);
     }
 
     callApi(url);
