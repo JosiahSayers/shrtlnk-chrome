@@ -7,7 +7,8 @@
     "scripts": [
       "background/postUrl.js",
       "background/contextMenu.js",
-      "background/notifications.js"
+      "background/notifications.js",
+      "background/storage.js"
     ],
     "persistent": false
   },
@@ -25,7 +26,8 @@
   "permissions": [
     "contextMenus",
     "https://shrtlnk.dev/",
-    "notifications"
+    "notifications",
+    "storage"
   ],
   "icons": {
     "16": "images/icons/icon16.png",

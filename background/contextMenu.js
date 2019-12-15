@@ -28,6 +28,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 async function callApi(url) {
   let response = await postUrl(url);
   if (response && response.shrtlnk) {
+    storeApiResponse(response);
     mostRecentShrtlnk = response.shrtlnk;
     notifyApiCallSuccess(response);
   }
