@@ -1,12 +1,3 @@
-function notifyApiCallSent() {
-  chrome.notifications.create('ApiCallSent', {
-    type: 'basic',
-    iconUrl: '../images/icons/icon512.png',
-    title: 'Creating a shrtlnk...',
-    message: 'Your shortened link will be created soon. You\'ll get another notification when it\'s ready.'
-  });
-}
-
 function notifyApiCallSuccess(apiResponse) {
   chrome.notifications.create('ApiCallSuccess', {
     type: 'basic',
